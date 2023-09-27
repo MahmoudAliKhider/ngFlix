@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BannerComponent } from './components/banner/banner.component';
 import { ShowItemComponent } from './components/show-item/show-item.component';
 import { ShowDetailComponent } from './pages/show-detail/show-detail.component';
+import { PrimeNgModule } from './shared/primeng.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ShowDetailComponent } from './pages/show-detail/show-detail.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PrimeNgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
