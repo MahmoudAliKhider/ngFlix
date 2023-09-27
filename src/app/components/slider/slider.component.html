@@ -1,10 +1,10 @@
-<div class="slider" *ngIf="movies$ | async as movies">
-  <ng-container *ngFor="let movie of movies; let movieIndex = index">
+<div class="slider" *ngIf="slides">
+  <ng-container *ngFor="let movie of slides; let movieIndex = index">
     <div class="slide" *ngIf="movieIndex === slideIndex" @slideFade>
       <div class="slide-bg">
         <img
           [src]="imagesBaseUrl + 'w1280' + movie.backdrop_path"
-          alt= {{movie.title}}
+          alt="{{movie.title}}"
         />
       </div>
       <div class="slide-pane">

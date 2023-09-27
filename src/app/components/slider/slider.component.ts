@@ -5,9 +5,10 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
 import { imagesBaseUrl } from '../../constants/images-sizes';
+import { Movie } from 'src/app/modules/movie';
 
 @Component({
   selector: 'app-slider',
@@ -21,16 +22,19 @@ import { imagesBaseUrl } from '../../constants/images-sizes';
   ],
 })
 export class SliderComponent implements OnInit {
-  constructor(private moviesService: MoviesService) {}
+  @Input() slides: Movie[] = [];
+  @Input() isHeader = false;
 
-  movies$ = this.moviesService.getMoviesByType('popular');
+  // constructor() {}
 
   slideIndex = 0;
 
   imagesBaseUrl = imagesBaseUrl;
 
   ngOnInit() {
-    this.changeSlide();
+    if (!this.isHeader) {
+      this.changeSlide();
+    }
   }
 
   changeSlide() {
