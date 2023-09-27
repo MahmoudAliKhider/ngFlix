@@ -15,6 +15,8 @@ import { ShowItemComponent } from './components/show-item/show-item.component';
 import { ShowDetailComponent } from './pages/show-detail/show-detail.component';
 import { PrimeNgModule } from './shared/primeng.module';
 import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
+import { FormsModule } from '@angular/forms';
+import { GenresComponent } from './pages/genres/genres.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +29,17 @@ import { VideoEmbedComponent } from './components/video-embed/video-embed.compon
     BannerComponent,
     ShowItemComponent,
     ShowDetailComponent,
-    VideoEmbedComponent
+    VideoEmbedComponent,
+    GenresComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    PrimeNgModule
+    PrimeNgModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
