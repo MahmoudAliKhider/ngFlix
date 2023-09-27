@@ -14,6 +14,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { ShowItemComponent } from './components/show-item/show-item.component';
 import { ShowDetailComponent } from './pages/show-detail/show-detail.component';
 import { PrimeNgModule } from './shared/primeng.module';
+import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PrimeNgModule } from './shared/primeng.module';
     SliderComponent,
     BannerComponent,
     ShowItemComponent,
-    ShowDetailComponent
+    ShowDetailComponent,
+    VideoEmbedComponent
   ],
   imports: [
     BrowserModule,
