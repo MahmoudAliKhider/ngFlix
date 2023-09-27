@@ -23,7 +23,5 @@ export class GenresComponent implements OnInit {
 
     this.genres$ = this.mService.getMoviesGenres();
   }
-  findByGenre(genreId: string) {
-    this.shows$ = this.mService.getMoviesByGenre(genreId);
-  }
+  
 }
