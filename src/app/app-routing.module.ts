@@ -6,15 +6,15 @@ import { ShowDetailComponent } from './pages/show-detail/show-detail.component';
 import { GenresComponent } from './pages/genres/genres.component';
 
 const routes: Routes = [
-  {path:"",component:HomeComponent},
-  {path:"movie-list",component:MovieListComponent},
-  {path:"detail/:id/:type",component:ShowDetailComponent},
+  { path: '', component: HomeComponent },
+  { path: 'list/:type', component: MovieListComponent },
+  { path: 'detail/:id/:type', component: ShowDetailComponent },
   { path: 'genres', component: GenresComponent },
   { path: 'genres/:genreId', component: GenresComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

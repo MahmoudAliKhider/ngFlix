@@ -25,7 +25,8 @@ export class SliderComponent implements OnInit {
   @Input() slides: Movie[] = [];
   @Input() isHeader = false;
 
-  // constructor() {}
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  constructor() {}
 
   slideIndex = 0;
 
